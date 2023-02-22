@@ -10,7 +10,7 @@
       content="HTML, CSS, JavaScript, _REPLACE_WITH_KEYWORD_"
     />
     <meta name="author" content="_YOUR_NAME_" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <script type="module" src="/js/details.js"></script>
     <script type="module" src="/js/main.js"></script>
     <title>Rick And Morty</title>
@@ -21,6 +21,47 @@
     </header>
     <main>
       <div class="results" id="#results"></div>
+      <section>
+        <form id="js-search-form">
+          <fieldset class="fieldset">
+            <label for="search">Search</label>
+            <input type="search" id="js-search" name="search" />
+          </fieldset>
+
+          <details>
+            <summary>Filter</summary>
+
+            <fieldset class="fieldset">
+              <legend>Filter</legend>
+
+              <label for="min-rating">Minimum Rating</label>: 0
+              <input
+                type="range"
+                id="js-min-rating"
+                name="min-rating"
+                min="0"
+                max="5"
+              />
+
+              <br />
+              <button type="submit">Filter</button>
+            </fieldset>
+          </details>
+
+          <fieldset class="fieldset">
+            <label for="order-by">Order by:</label>
+
+            <select id="js-order-by" name="order-by">
+              <option value="name-ascending">Name A-Z</option>
+              <option value="name-descending">Name Z-A</option>
+            </select>
+            <br />
+          </fieldset>
+        </form>
+      </section>
+      <div class="results" id="js-results">
+        <div class="loader"></div>
+      </div>
     </main>
   </body>
 </html>

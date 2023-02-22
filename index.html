@@ -3,14 +3,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rick and Morty</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <script type="module" src="/js/main.js"></script>
     <script type="module" src="/js/details.js"></script>
+    <script type="module" src="/js/main.js"></script>
   </head>
 
   <body>
     <header class="header">
-      <h1>Rick And Morty</h1>
+      <section id="card-container">
+        <h1>Characters</h1>
+      </section>
     </header>
 
     <main>
@@ -20,7 +23,7 @@
           <input type="search" id="js-search" />
         </section>
       </div>
-      <div class="results" id="#results">
+      <div class="results" id="js-results">
         <div class="loader"></div>
       </div>
 
