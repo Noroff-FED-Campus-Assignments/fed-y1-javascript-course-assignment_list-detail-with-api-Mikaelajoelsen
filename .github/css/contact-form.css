@@ -1,0 +1,51 @@
+input,
+select,
+label,
+textarea {
+    border: 1px solid var(--color-light-blue);
+    padding: 10px;
+    font-family: var(--primary-body-font-family);
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.textarea {
+    width: 100%;
+    max-width: 420px;
+}
+
+.contact {
+    display: flex;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0 20px;
+    border-top: 1px;
+}
+
+form {
+    padding: 2em;
+    background: white;
+    border-radius: 1rem;
+}
+
+.form-error {
+    display: none;
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+button {
+    background: rgb(11, 91, 133);
+    border: none;
+    width: 200px;
+    padding: 1rem;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
