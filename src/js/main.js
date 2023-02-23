@@ -48,14 +48,14 @@ const params = new URLSearchParams(queryString);
   <a href="details.html?id=${character.id}" class="container">
     <h2>${character.name}</h2>
     <img src=${character.image}></img>
-    <p class="gender">Gender:${character.name}</p>
+    <p class="name">Name:${character.name}</p>
     <p class="gender">Gender:${character.gender}</p>
-    <p class="gender">Gender:${character.species}</p>
+    <p class="species">Species:${character.species}</p>
   </a>
   `
    })
   
   }
-  
+
   
   

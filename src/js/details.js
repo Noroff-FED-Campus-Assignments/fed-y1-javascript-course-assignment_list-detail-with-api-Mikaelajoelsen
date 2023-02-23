@@ -27,7 +27,7 @@ async function fetchCharacters(searchValue ="") {
   `
   <div class="card-details">
   <div class ="container">
-  <h1>${results.name}</h1>
+  <h2>${results.name}</h2>
   <img src=${results.image}>
   <p>${results.name}</p>
   <p>${results.species}</p>

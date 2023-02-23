@@ -1,3 +1,7 @@
+h2 {
+  font-size: 40px;
+}
+
 .card-section {
   display: flex;
   margin: 1em;
@@ -10,17 +14,23 @@
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  width: 400px;
+  max-width: 400px;
   text-decoration: none;
   background-color: black;
   padding: 1.25rem;
   color: white;
   margin: 16px;
+  border: 5px solid rgba(37, 210, 237, 0.709);
 }
 
 .container:hover {
-  background-color: rgb(218, 0, 0);
+  background-color: rgba(37, 210, 237, 0.709);
   color: black;
+}
+
+.container p {
+  font-size: 20px;
 }
 
 .name {
