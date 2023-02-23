@@ -1,7 +1,59 @@
-/*@import "src/css/animate.css";
+@import "src/css/animate.css";
 @import "src/css/form.css";
 @import "src/css/layout.css";
 @import "src/css/reset.css";
 @import "src/css/ui.css";
 @import "src/css/utilities.css";
-@import "src/css/variables.css";*/
+@import "src/css/variables.css";
+@import "src/css/cards.css";
+@import "src/css/contact.css";
+
+body {
+  background-color: grey;
+}
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 35px;
+}
+
+.fieldset {
+  font-size: 25px;
+}
+
+summary {
+  font-size: 30px;
+}
+
+.back-button a {
+  text-decoration: underline;
+  list-style: none;
+  color: black;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.contact-us a {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-decoration: underline;
+  margin-top: 50px;
+  color: black;
+  font-size: 30px;
+}

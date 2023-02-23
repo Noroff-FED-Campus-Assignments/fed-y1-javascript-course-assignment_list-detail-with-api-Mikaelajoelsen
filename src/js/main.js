@@ -4,6 +4,7 @@ const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
 
+
     const url =
       "https://rickandmortyapi.com/api/character";
     
@@ -34,16 +35,27 @@ const params = new URLSearchParams(queryString);
   }
 
   fetch("https://rickandmortyapi.com/api/character")
-.then(response => response.json())
-.then(data => makeCards(data.results))
-    
-function makeCards(charactersArray){
- const cardContainer = document.querySelector
- ('#card-container')
- console.log(charactersArray)
- charactersArray.forEach(character => {
-cardContainer.innerHTML = cardContainer.innerHTML + `<h2>${character.name}</h2>
-<img src=${character.image}></img>`
- })
-
-}
+  .then(response => response.json())
+  .then(data => makeCards(data.results))
+      
+  function makeCards(charactersArray){
+   const cardContainer = document.querySelector
+   ('#card-container')
+   console.log(charactersArray)
+   charactersArray.forEach(character => {
+  cardContainer.innerHTML = cardContainer.innerHTML += 
+  `
+  <a href="details.html?id=${character.id}" class="container">
+    <h2>${character.name}</h2>
+    <img src=${character.image}></img>
+    <p class="gender">Gender:${character.name}</p>
+    <p class="gender">Gender:${character.gender}</p>
+    <p class="gender">Gender:${character.species}</p>
+  </a>
+  `
+   })
+  
+  }
+  
+  
+  

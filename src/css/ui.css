@@ -1,0 +1,51 @@
+/*!
+ * UI
+ * Place all your regular CSS here. If you don't know where to write your css, write it here.
+ * @tutorial https://web.dev/learn/css/flexbox/
+ * @example https://fed-vocational-astro-course.vercel.app/en/html-css/module-3/media-queries
+ */
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  max-width: 300px;
+  margin: 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+
+.cards a.container {
+  margin-top: 0.5em;
+  background-color: var(--grey) !important;
+  color: white !important;
+}
+
+.cards .container {
+  color: var(--grey);
+}
+
+.cards a.container:hover {
+  background-color: var(--light-grey) !important;
+  color: var(--grey) !important;
+}
+
+.cards div.container {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  background: white;
+}
+
+.name {
+  font-size: 16px;
+  margin-bottom: 0.75rem;
+  color: var(--grey);
+  font-weight: bold;
+}
+
+.image {
+  height: 150px;
+  background-size: cover;
+  background-position: center top;
+}

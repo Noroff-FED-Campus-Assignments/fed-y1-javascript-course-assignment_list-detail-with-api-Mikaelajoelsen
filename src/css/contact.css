@@ -1,0 +1,25 @@
+.contact-main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+  width: 50%;
+}
+
+.contact-page {
+  display: flex;
+  margin-top: 20px;
+}
+.contact-page a {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  background-color: rgb(78, 70, 70);
+}

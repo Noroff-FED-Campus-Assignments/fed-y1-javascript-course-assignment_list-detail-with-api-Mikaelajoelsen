@@ -3,36 +3,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rick and Morty</title>
-    <link rel="stylesheet" href="style.css" />
-    <script type="module" src="/js/main.js"></script>
-    <script type="module" src="/js/details.js"></script>
-    <script type="module" src="/js/main.js"></script>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/src/js/main.js"></script>
   </head>
-
   <body>
     <header class="header">
-      <section id="card-container">
-        <h1>Characters</h1>
-      </section>
+      <h1>Home Page</h1>
     </header>
-
     <main>
-      <div class="nav-container">
-        <section>
-          <label for="search">Search</label>
-          <input type="search" id="js-search" />
-        </section>
+      <div class="search-options">
+        <input
+          type="search"
+          class="search"
+          name="search-text"
+          id="search-bar"
+          placeholder="Search!"
+        />
       </div>
       <div class="results" id="js-results">
         <div class="loader"></div>
       </div>
+      <div class="contact-page">
+        <a href="contact.html">Contact Page</a>
+      </div>
 
-      <footer>
-        API powered by
-        <a href="https://rickandmortyapi.com/api" target="_blank"
-          >Rick and Morty</a
-        >
-      </footer>
+      <section class="card-section" id="card-container"></section>
     </main>
+    <footer>
+      API powered by
+      <a href="https://rickandmortyapi.com/api" target="_blank"
+        >Rick and Morty</a
+      >
+    </footer>
   </body>
 </html>

@@ -14,7 +14,7 @@ if (results) renderResults ();
 
 fetchResults();
 
-formEl.addEventListener("submit", function (event) {
+formEl.addEventListener("submit", function (event){
   event.preventDefault();
 
   results  = filterResults (results, searchEl.value, minResultsEl.value);
@@ -103,7 +103,7 @@ function renderResults(
       const image = clip?.clip ?? results_image;
 
       containerEl.innerHTML += `
-            <a href="/examples/adding-parameters-details.html?id=${id}" class="card">
+            <a href="/index.html?id=${id}" class="card">
                 <div class="image" style="background-image: url(${image});"></div>
                 <div class="details">
                     <h4 class="name">${name}</h4>
