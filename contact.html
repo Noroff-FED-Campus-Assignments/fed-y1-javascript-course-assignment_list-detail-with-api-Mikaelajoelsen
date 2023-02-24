@@ -11,6 +11,7 @@
     />
     <meta name="author" content="_YOUR_NAME_" />
     <link rel="stylesheet" href="/style.css" />
+    <script type="module" defer src="/src/js/contact.js"></script>
     <title>Contact Us</title>
   </head>
   <body>
@@ -21,28 +22,22 @@
       <div class="contact-header">
         <h1>Contact Us</h1>
       </div>
-      <div class="contact-info">
-        <form class="contact-main" action="submit" method="post">
-          <label for="name">First Name:</label>
-          <input type="text" id="name" name="name" required />
 
-          <label for="name">Last Name:</label>
-          <input type="text" id="name" name="name" required />
+      <div class="contact-info">
+        <form class="contact-main" id="js-form" autocomplete="off">
+          <label for="name">Name:</label>
+          <input type="text" id="js-name" name="name" required />
 
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="js-email" name="email" required />
 
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required />
+          <label for="Adress">Adress:</label>
+          <input type="Adress" id="js-adress" name="adress" required />
 
-          <label for="country">Country</label>
-          <select class="countries" id="country" name="country">
-            <option value="Norway">Norway</option>
-            <option value="Norway">Sweden</option>
-            <option value="Norway">Denmark</option>
-          </select>
+          <label for="birthday">Birthday:</label>
+          <input type="date" id="js-birthday" name="js-birthday" required />
 
-          <input class="submit" type="submit" value="Submit" />
+          <button type="submit">Submit</button>
         </form>
       </div>
     </main>
