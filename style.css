@@ -55,6 +55,15 @@ h1 {
   color: white;
 }
 
+a {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+  font-size: 45px;
+}
+
 /* .contact-us a {
   display: flex;
   flex-direction: row;
