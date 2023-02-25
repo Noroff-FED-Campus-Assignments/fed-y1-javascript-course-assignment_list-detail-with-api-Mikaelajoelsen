@@ -10,7 +10,7 @@ function checkFields(event) {
   const birthDateEl = document.querySelector("#js-birthday");
 
   const name = nameEl.value;
-  const email = emailEl.value;-
+  const email = emailEl.value;
   const adress = adressEl.value;
   const birthday = birthDateEl.value;
   resetValidationFeedback();
