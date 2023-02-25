@@ -13,6 +13,15 @@
     <link rel="stylesheet" href="/style.css" />
     <script type="module" defer src="/src/js/contact.js"></script>
     <title>Contact Us</title>
+    <style>
+      .validationerror {
+        color: red;
+        display: none;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: smaller;
+      }
+    </style>
   </head>
   <body>
     <main>
@@ -24,19 +33,27 @@
       </div>
 
       <div class="contact-info">
-        <form class="contact-main" id="js-form" autocomplete="off">
+        <form class="contact-main" id="js-form-contact" autocomplete="off">
           <label for="name">Name:</label>
-          <input type="text" id="js-name" name="name" required />
-
+          <input id="js-name" name="name" />
+          <p class="validationerror" id="nameerrormsg">
+            Please enter your name above (can only contain letters).
+          </p>
           <label for="email">Email:</label>
-          <input type="email" id="js-email" name="email" required />
-
+          <input id="js-email" name="email" />
+          <p class="validationerror" id="mailerrormsg">
+            Please enter a correct email above (test@test.com).
+          </p>
           <label for="Adress">Adress:</label>
-          <input type="Adress" id="js-adress" name="adress" required />
-
+          <input type="Adress" id="js-adress" name="adress" />
+          <p class="validationerror" id="addresserrormsg">
+            Please enter your address above.
+          </p>
           <label for="birthday">Birthday:</label>
-          <input type="date" id="js-birthday" name="js-birthday" required />
-
+          <input type="date" id="js-birthday" name="js-birthday" />
+          <p class="validationerror" id="dateerrormsg">
+            Please enter a valid birth date.
+          </p>
           <button type="submit">Submit</button>
         </form>
       </div>
