@@ -1,30 +1,51 @@
-/*
-============================================
-Constants
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/advanced-form.html#L50
-============================================
-*/
+const formEl = document.querySelector("#js-form");
+const nameEl = document.querySelector("#js-name");
+const emailEl = document.querySelector("#js-email");
+const adressEl = document.querySelector("#js-adress");
 
-// TODO: Get DOM elements from the DOM
+formEl.addEventListener ("submit", (event) => {
+    event.preventDefault();
 
-// TODO: Create event listeners for the form
+    const name = nameEl.value;
+    const email = emailEl.value;
+    const adress = adressEl.value;
+    const message = messageEl.value;
 
-/*
-============================================
-API calls
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/advanced-form.html#L157
-============================================
-*/
+    if (name === "") {
+        alert("please enter a name");
+        return;
+    }
 
-// TODO: Set up a function to fetch data from the API
+    if (email === "") {
+        alert("please enter an email-adress");
+        return;
+    }
 
-/*
-============================================
-Helper functions
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/advanced-form.html#L118
-============================================
-*/
+    if (adress === "") {
+        alert("please enter an adress");
+        return;
+    }
 
-// TODO: Create a function to validate an input field
+    if (subject === "") {
+        alert("please enter a message");
+        return;
+    }
 
-// TODO: Create a function to create a DOM element
+    alert("form submitted")
+ 
+});
+
+nameEl.addEventListener("blur", (event) => {
+    const name = event.target.value.trim();
+
+    const minLengthRegex = /^[a-zA-Z]{2,}/;
+
+    if (minLengthRegex.test(name)) {
+     event.target.classList.add("is-success");
+     event.target.classList.remove("is-wrong");
+    }
+    else {
+    event.target.classList.add("is-wrong");
+    event.target.classlist.remove("is-success");
+    }
+});

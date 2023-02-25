@@ -1,13 +1,103 @@
-/* the props */
-@import "open-props/style";
-
-/* optional imports that use the props */
-@import "open-props/normalize";
-@import "animate.css";
-
-@import "src/css/variables.css";
-@import "src/css/reset.css";
-@import "src/css/utilities.css";
-@import "src/css/layout.css";
+@import "src/css/animate.css";
 @import "src/css/form.css";
+@import "src/css/layout.css";
+@import "src/css/reset.css";
 @import "src/css/ui.css";
+@import "src/css/utilities.css";
+@import "src/css/variables.css";
+@import "src/css/cards.css";
+@import "src/css/contact.css";
+
+body {
+  background-color: rgb(56, 49, 49);
+}
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 35px;
+}
+
+.fieldset {
+  font-size: 25px;
+}
+
+summary {
+  font-size: 30px;
+}
+
+.back-button a {
+  display: flex;
+  justify-content: first baseline;
+  text-decoration: underline;
+  list-style: none;
+  color: black;
+  font-size: 35px;
+  color: #fff;
+  padding: 55px 55px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  color: white;
+}
+
+a {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+  font-size: 45px;
+}
+
+/* .contact-us a {
+  display: flex;
+  flex-direction: row;
+  font-size: 35px;
+  text-decoration: underline;
+  margin-top: 50px;
+  color: rgb(214, 255, 185);
+  text-shadow: 2px 2px rgb(186, 255, 113);
+  font-size: 30px;
+}
+
+.contact-page {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  text-decoration: underline;
+} */
+
+.search {
+  width: 50%;
+  height: 40px;
+  position: relative;
+  display: flex;
+  border: 3px solid black;
+  border-right: none;
+  padding: 5px;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 20px;
+  color: white;
+}
+
+.logo-image {
+  display: flex;
+  max-width: 100%;
+  width: 30%;
+}
