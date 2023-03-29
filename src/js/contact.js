@@ -1,8 +1,9 @@
 var myForm = document.querySelector("#js-form-contact");
 myForm.addEventListener("submit", checkFields);
+
 function checkFields(event) {
   event.preventDefault();
-  var is_all_ok = true;
+  let is_all_ok = true;
   let nameRegEx = /^[a-z ,.'-]+$/i;
   const emailEl = document.querySelector("#js-email");
   const adressEl = document.querySelector("#js-adress");

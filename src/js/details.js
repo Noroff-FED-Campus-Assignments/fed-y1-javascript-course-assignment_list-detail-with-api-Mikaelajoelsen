@@ -1,30 +1,19 @@
 const detailContainer = document.querySelector("#js-results");
-const searchEl = document.querySelector("#js-search");
-
 const queryString = document.location.search;
-
 const params = new URLSearchParams(queryString);
-
-console.log(detailContainer);
 
 const id = params.get("id");
 
 const url = `https://rickandmortyapi.com/api/character/${id}`;
 
-
-console.log(id);
-
-async function fetchCharacters(searchValue ="") {
-  
+async function fetchCharacters() {
   try {
-  detailContainer.innerHTML = `<div class="loader"></div>`;
+    detailContainer.innerHTML = `<div class="loader"></div>`;
 
-  const response = await fetch(url);
-  const results = await response.json();
-  console.log("results",results);
+    const response = await fetch(url);
+    const results = await response.json();
 
-  detailContainer.innerHTML =
-  `
+    detailContainer.innerHTML = `
   <div class="card-details">
   <div class ="container">
   <h2>${results.name}</h2>
@@ -36,13 +25,10 @@ async function fetchCharacters(searchValue ="") {
   </div>
   </div>
   `;
-
-} catch(error){
-      console.log("error message",error);
-      return null; 
+  } catch (error) {
+    console.log("error message", error);
+    return null;
   }
-   };
+}
 
-   fetchCharacters();
-  
-   
+fetchCharacters();
