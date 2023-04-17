@@ -1,50 +1,36 @@
-const detailContainer = document.querySelector("#results");
+const detailContainer = document.querySelector("#js-results");
 
-const queryString = document.location.search;
+const url = "https://rickandmortyapi.com/api/character";
 
-const params = new URLSearchParams(queryString);
+async function fetchresults() {
+  try {
+    const response = await fetch(url);
+    const details = await response.json();
 
+    console.log(results);
 
-    const url =
-      "https://rickandmortyapi.com/api/character";
-    
-    console.log(url);
-    
-    async function fetchresults() {
-      try {
-        const response = await fetch(url);
-        const details = await response.json();
-    
-        console.log(results);
-    
-        createHtml(results);
-      } catch (error) {
-        console.log(error);
-        detailContainer.innerHTML = message("error", error);
-      }
-    }
-
-    async function rickandmortyapi() {
-       
-    
-      const response = await fetch(url);
-      const results = await response.json();
-     console.log(results);
-     showSpecies(results.species);
-
+    createHtml(results);
+  } catch (error) {
+    console.log(error);
+    detailContainer.innerHTML = message("error", error);
   }
+}
 
-  fetch("https://rickandmortyapi.com/api/character")
-  .then(response => response.json())
-  .then(data => makeCards(data.results))
-      
-  function makeCards(charactersArray){
-   const cardContainer = document.querySelector
-   ('#card-container')
-   console.log(charactersArray)
-   charactersArray.forEach(character => {
-  cardContainer.innerHTML = cardContainer.innerHTML += 
-  `
+fetch("https://rickandmortyapi.com/api/character")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log("this is data", data);
+    console.log("this is results", data.results);
+    makeCards(data.results);
+  });
+
+function makeCards(charactersArray) {
+  const cardContainer = document.querySelector("#card-container");
+  console.log(charactersArray);
+  charactersArray.forEach((character) => {
+    cardContainer.innerHTML = cardContainer.innerHTML += `
   <a href="details.html?id=${character.id}" class="container">
     <h2>${character.name}</h2>
     <img src=${character.image}></img>
@@ -52,10 +38,6 @@ const params = new URLSearchParams(queryString);
     <p class="gender">Gender:${character.gender}</p>
     <p class="species">Species:${character.species}</p>
   </a>
-  `
-   })
-  
-  }
-
-  
-  
+  `;
+  });
+}
